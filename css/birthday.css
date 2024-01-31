@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: yellow;
+}
+
+.principal_card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+}
+.principal_card:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 0 10px 100px rgba(0, 0, 0, 0.5);
+}
+.principal_card:hover .frontCard {
+  transform: rotateY(-160deg);
+}
+.principal_card:hover .title {
+  visibility: hidden;
+}
+
+.frontCard {
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: 0.6s;
+}
+
+.title {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 30px;
+  background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+  transition: 0.1s;
+}
+
+.ballons {
+  position: absolute;
+}
+
+.ballon_1, .ballon_2, .ballon_3, .ballon_4 {
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.ballon_1 {
+  background-color: rgba(255, 40, 90, 0.7);
+  left: -10px;
+  top: 50px;
+  background-color: rgba(255, 40, 90, 0.7);
+  left: -10px;
+  top: 50px;
+}
+
+.ballon_2 {
+  background-color: rgba(9, 215, 160, 0.7);
+  left: 50px;
+  top: 20px;
+}
+
+.ballon_3 {
+  background-color: rgba(255, 186, 26, 0.7);
+  left: 110px;
+  top: 50px;
+}
+
+.ballon_4 {
+  background-color: rgba(12, 122, 159, 0.7);
+  left: 170px;
+  top: 20px;
+}
+
+.ballon_1::before, .ballon_2::before, .ballon_3::before, .ballon_4::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #ffc848;
+  top: 95px;
+  left: 43px;
+}
+
+.ballon_1::after, .ballon_2::after, .ballon_3::after, .ballon_4::after {
+  content: "";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: 94px;
+  left: 37px;
+}
+
+.ballon_1::after {
+  border-bottom: 10px solid #ff3e6b;
+}
+
+.ballon_2::after {
+  border-bottom: 10px solid #04b183;
+}
+
+.ballon_3::after {
+  border-bottom: 10px solid #ffc94c;
+}
+
+.ballon_4::after {
+  border-bottom: 10px solid rgba(255, 19, 169, 0.7411764706);
+}
+
+.cardMessage {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 30px 100px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-family: "Brush Script MT", cursive;
+  margin: 10px;
+  color: #333;
+}
+
+.name {
+  width: 30vh;
+  /* position: absolute; */
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  top: 300px;
+  color: #333;
+}
+
+.back {
+  font-family: Tahoma, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 30px;
+  outline-color: #333;
+  outline-style: dotted;
+}
+
+/*# sourceMappingURL=birthday.css.map */
